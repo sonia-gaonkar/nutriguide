@@ -17,7 +17,7 @@ We provide a unique AI powered platform to help you navigate the complexities of
 ## Requirements
 - Operating System: Windows, macOS, Linux
 - Software: Node.js, AngularJS, Python, Watsonx
-- Dependencies: 
+- Dependencies: -
 
 ## Installation
 

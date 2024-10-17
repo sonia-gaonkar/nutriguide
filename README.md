@@ -1,4 +1,4 @@
-# Nutriguide
+# nutriGuide
 
 ## Overview
 NutriGuide, your go-to resource for understanding food and calorie intake!

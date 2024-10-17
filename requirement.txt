@@ -1,0 +1,7 @@
+Install below python libraries
+
+python3.11 -m pip install fastapi==0.95.2 
+python3.11 -m pip install hypercorn==0.16.0
+python3.11 -m pip install requests==2.31.0
+python3.11 -m pip install ibm_watson_machine_learning==1.0.347
+

@@ -1,0 +1,120 @@
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center" [ngClass]="{'header-transparent' : transyHeader==true}">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1><a href="index.html"><span>Bootslander</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <img src="assets/img/logo3.png" alt="" style="width: 235px; height: 75px;">
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" *ngIf="!isSessionActive" href="#home">Home</a></li>
+          <li><a class="nav-link scrollto" *ngIf="isSessionActive" href="/dashboard" [ngClass]="{'active' : isDashboardActive==true}">Home</a></li>
+          <li><a class="nav-link scrollto"  *ngIf="!isSessionActive" href="#about">About</a></li>
+          <li><a class="nav-link scrollto"  *ngIf="!isSessionActive" href="#features">Features</a></li>
+            <li><a class="nav-link scrollto" *ngIf="isSessionActive" href="/advisor">NutriPal</a></li>
+          <li><a class="nav-link scrollto" *ngIf="isSessionActive" href="/image-study">Image Study</a></li>
+          <li><a class="nav-link scrollto" *ngIf="isSessionActive" href="/healthy-swaps">Healthy Swaps</a></li>
+          <li><a class="nav-link scrollto" *ngIf="!isSessionActive" href="javascript:void(0);" (click)="openLoginModal(LoginModaltemplate)">Login</a></li>
+          <!--<li *ngIf="isSessionActive">
+            <a class="nav-link scrollto" href="javascript:void()" (click)="logout()">Logout</a>
+          </li> -->
+          <li *ngIf="isSessionActive" class="dropdown"><a href="javascript:void(0);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.3em" height="2.3em" viewBox="0 0 32 32"><path fill="white" d="M26.494 3a3.47 3.47 0 0 0-2.48 1.04l-.511.522l-.516-.523a3.48 3.48 0 0 0-4.96 0a3.59 3.59 0 0 0 0 5.025l5.476 5.543l5.472-5.543a3.59 3.59 0 0 0 0-5.025A3.47 3.47 0 0 0 26.494 3M16 30h-2v-5a3.003 3.003 0 0 0-3-3H7a3.003 3.003 0 0 0-3 3v5H2v-5a5.006 5.006 0 0 1 5-5h4a5.006 5.006 0 0 1 5 5zM9 10a3 3 0 1 1-3 3a3 3 0 0 1 3-3m0-2a5 5 0 1 0 5 5a5 5 0 0 0-5-5"></path></svg></a>
+            <ul>
+              <li><a href="javascript:void(0);" (click)="openLoginModal(LoginProfiletemplate)">View</a></li>
+              <li><a href="#">Edit</a></li>
+              <li><a href="javascript:void()" (click)="logout()">Logout</a></li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<!-- <main class="main">
+  <div class="content">
+  </div>
+</main> -->
+<router-outlet />
+
+<!-- SignUp Modal Template -->
+<ng-template #LoginModaltemplate>
+  <div id="scrollbar1" class="modal-body">
+
+    <div class="container11">
+      <div class="screen">
+        <div class="screen__content">
+          <form class="login" #loginform = "ngForm">
+            <div class="login__field">
+              <i class="login__icon fas fa-user"></i>
+              <input type="text" id="username" name="username" class="login__input" ngModel placeholder="User name">
+            </div>
+            <div class="login__field">
+              <i class="login__icon fas fa-lock"></i>
+              <input type="password"  id="password" name="password" ngModel class="login__input" placeholder="Password">
+            </div>
+            <button class="button login__submit" (click)="login(loginform)">
+              <span class="button__text">Log In Now</span>
+              <i class="button__icon fas fa-chevron-right"></i>
+            </button>				
+          </form>
+        </div>
+        <div class="screen__background">
+          <span class="screen__background__shape screen__background__shape4"></span>
+          <span class="screen__background__shape screen__background__shape3"></span>		
+          <span class="screen__background__shape screen__background__shape2"></span>
+          <span class="screen__background__shape screen__background__shape1"></span>
+        </div>		
+      </div>
+    </div>
+
+  </div>
+</ng-template>
+
+
+
+
+<!-- SignUp Modal Template -->
+<ng-template #LoginProfiletemplate>
+  <div id="scrollbar1" class="modal-body">
+    
+    <div class="wrapper1">
+      <div class="user-card28">
+          <div class="user-card-img">
+            <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt="">
+          </div>
+          <div class="user-card-info">
+            <h2>{{userData.firstname}} &nbsp; {{userData.lastname}}</h2>
+            <p><span>Email:</span>{{userData.email}}</p>
+            <p><span>Username:</span>{{userData.username}}</p>
+            <p><span>Gender:</span> {{userData.gender}}</p>
+            <p><span>Age:</span> {{userData.age}}</p>
+            <p><span>Height:</span> {{userData.height}}</p>
+            <p><span>Weight:</span> {{userData.weight}}</p>
+            <p><span>BMI:</span> {{userData.bmi}}</p>
+
+            <p><span>Medical Condition:</span></p>
+            <span>
+              <ul>
+                <li *ngFor="let item of userData.medical_condition | keyvalue">
+                  {{item.key}}
+                </li>
+              </ul>
+            </span>
+            <p><span>Medication :</span> {{userData.medication}}</p>
+            <p><span>Allergies:</span> {{userData.allergies}}</p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</ng-template>

@@ -1,0 +1,36 @@
+# configuration for controller service
+[Controller]
+port=7050
+host=0.0.0.0
+log_file_name=controller
+
+# configuration for feature extraction service
+[Content Search]
+port=7060
+host=0.0.0.0
+log_file_name=content_search
+
+# configuration for node server
+[Node Server]
+port=4200
+host=0.0.0.0
+
+#log config
+[log_details]
+name=root
+level=INFO
+log_path=<log-path>
+
+#certificate config
+[certificate_paths]
+path=<certificate-path>
+cert_file_name=ca.crt
+key_file_name=ca.key
+
+[DB_CONF]
+db_path=<db-path>
+
+[WATSON_CONF]
+project_id=
+api_key=
+url=

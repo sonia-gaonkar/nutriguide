@@ -1,0 +1,101 @@
+<div class="main-content" style="margin: 80px 0;">
+
+    <span class="loader"></span>
+
+    <div class="overlay" *ngIf="showspinner">
+        <div class="overlay-content">
+          <div class="loader15"></div>
+        </div>
+    </div>
+
+    <main id="main">
+        <!-- ======= Breadcrumbs Section ======= -->
+        <section class="breadcrumbs">
+          <div class="container">
+    
+            <div class="d-flex justify-content-between align-items-center">
+              <h2>Healthy Swaps</h2>
+              <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Swaps</li>
+              </ol>
+            </div>
+    
+          </div>
+        </section><!-- End Breadcrumbs Section -->
+
+    
+        <section class="inner-page" style="padding: 15px 0;">
+            <div class="container" style="text-align: center;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card_input">
+
+                          <div class="row">
+                            <div class="col-md-6">
+                              <p style="font-size: 15px; color: #fff;">
+                                Interested in discovering healthier options for unhealthy foods? Give <b>HealthySwap</b> a try!
+                            </p>
+                            </div>
+                            <div class="col-md-4">
+                              <form #chatForm="ngForm" name="chatForm" id="chatForm" novalidate style="float: left;">
+                                <!-- <textarea placeholder="Enter any food item....like pizza" name="chatQuery" id="chatQuery" ngModel style="border-radius: 5px; width: 95%;"></textarea> -->
+                                <input type="text" placeholder="Enter any food item....like pizza" name="chatQuery" id="chatQuery" ngModel style="border-radius: 5px; width: 245px; border: 1px solid grey; height: 35px;">
+                                <span style="margin-left:-20px; vertical-align: top; cursor: pointer; color: grey;" (click)="clearText('chatQuery')">x</span>
+                                <button type="submit" (click)="getChatResponse(chatForm, 'FOOD_SWAP')" style="border: none; background: none; margin-left: 10px; ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="2.2em" height="2.2em" viewBox="0 0 32 32"><path fill="white" d="m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L7 16L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78m-20.9 10L8.76 17H18v-2H8.76L6.55 6.89L24.76 16Z"/></svg>
+                                </button>
+                            </form>
+                            </div>
+                            <div class="col-md-2">
+                              <img src="assets/img/988574.gif" alt="" style="width: 100px; height: 50px;">
+                            </div>
+                          </div>                           
+    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 25px;" *ngIf="chatResponse">
+                    <div class="col-md-12">
+                        <div class="main1">
+                            <ul class="cards">
+                              <li class="cards_item">
+                                <div class="card" style="width: 90%;">
+                                  <div class="card_image"><img src="https://www.eatthis.com/wp-content/uploads/sites/4/2024/01/Unhealthy-foods.jpg" alt="mixed vegetable salad in a mason jar. "></div>
+                                  <div class="card_content">
+                                    <h2 class="card_title" style="margin: 1.2rem 0;">My chosen food</h2>
+                                    <div class="card_text">
+                                      <p *ngFor="let item of chatResponse['Original food'] | keyvalue" style="margin-bottom: 19px;">
+                                        {{item.key}} : {{item.value}}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                          
+                              <li class="cards_item">
+                                <div class="card" style="width: 90%;">
+                                  <div class="card_image"><img src="https://www.betterliveshealthyfuturesbw.nhs.uk/wp-content/uploads/2020/06/5_11_healthy_foods_pixabay.jpg" alt="a Reuben sandwich on wax paper. "></div>
+                                  <div class="card_content">
+                                    <h2 class="card_title" style="margin: 1.2rem 0;">Recommended Healthy Swap</h2>
+                                    <div class="card_text">
+                                      <!-- <p>All great meals take time, but this one takes it to the next level! More than 650 hours of fermenting, brining, aging, and curing goes into each and every one of our legendary Reuben sandwiches.
+                                      </p> -->
+                                      <p *ngFor="let item of chatResponse['Alternate food'] | keyvalue" style="margin-bottom: 19px;">
+                                        {{item.key}} : {{item.value}}
+                                      </p>
+                                        
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</div>    

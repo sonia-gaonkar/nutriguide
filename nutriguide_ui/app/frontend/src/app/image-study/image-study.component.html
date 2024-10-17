@@ -1,0 +1,103 @@
+<div class="main-content" style="margin: 80px 0;">
+
+    <span class="loader"></span>
+
+    <div class="overlay" *ngIf="showspinner">
+        <div class="overlay-content">
+          <div class="loader15"></div>
+        </div>
+    </div>
+
+    <main id="main">
+        <!-- ======= Breadcrumbs Section ======= -->
+        <section class="breadcrumbs">
+          <div class="container">
+    
+            <div class="d-flex justify-content-between align-items-center">
+              <h2>Image Study</h2>
+              <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Study</li>
+              </ol>
+            </div>
+    
+          </div>
+        </section><!-- End Breadcrumbs Section -->
+
+        
+    
+        <section class="inner-page" style="padding: 15px 0;">
+            <div class="container">
+
+                <main id="wrapper33">
+                    <section id="article-tip1" class="container33" style="padding: 0;">
+                      <div id="article-tip1-cover" class="article-cover col-left " style="padding: 0 30px;">
+                        <form #chatForm="ngForm" name="chatForm" id="chatForm" novalidate style="margin-top: 40px;">
+                            <h1 class="article-cover-title">Image Evaluation Hub</h1>
+                            <p>Submit a link to any food image here to assess whether it's healthy for you.</p>
+                            
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <input type="text" name="imageLink" id="imageLink" ngModel placeholder="Paste your image link here" style="width: 100%; border-radius: 5px; border: none; height: 40px; font-size: 13px;" (blur)="setImageThumbnail()"> <span style="margin-left:-15px; cursor: pointer; color: grey;" (click)="clearText('imageLink')">x</span>
+                                </div>
+                                <div class="col-md-1">
+                                    <button type="submit" (click)="getChatResponse(chatForm, 'USER_QUERY')" style="border: none; background: none; vertical-align: top; margin-left: -20px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="2.3em" height="2.3em" viewBox="0 0 32 32"><path fill="white" d="m27.45 15.11l-22-11a1 1 0 0 0-1.08.12a1 1 0 0 0-.33 1L7 16L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78m-20.9 10L8.76 17H18v-2H8.76L6.55 6.89L24.76 16Z"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                               <!--  <div class="col-md-12" [ngClass]="{'ocrloader' : showspinner}"> -->
+                                <div class="col-md-12">
+                                    <img *ngIf="showImgLink1==true" src="{{imgThumbnail}}" alt="" style="width: 100%; height: 100%; margin-top: 15px;">
+                                </div>
+                            </div>
+
+                                
+                            <!-- <div class="ocrloader">
+                                <p>Scanning</p>
+                                <em></em>
+                                <span></span>
+                              </div> -->
+                        </form>
+                      </div>
+                      
+                      <div id="article-tip1-content" class="article-content col-2 col-right" style="padding: 0 50px; flex-flow: wrap;">
+                        <div style="margin-top: 40px;">
+                            <!-- <div class="loader" *ngIf="showspinner" style="margin-top: 15%; margin-left: 50%;"></div> -->
+                            <h1 class="article-content-title" style="text-align: left;">Insight Summary</h1>
+                            <div *ngIf="!chatResponse && !showspinner">                                
+                                <h3 class="article-content-summary">This tool assists you in evaluating whether a specific food item aligns with your dietary needs and health goals. </h3>
+                                <p>By examining its nutritional value, ingredients, and potential health benefits or drawbacks, you can gain valuable insights that empower you to make healthier food choices tailored to your personal health goals. Whether you're looking to manage weight, improve overall wellness, or address specific dietary restrictions, this analysis offers guidance to support your journey toward better nutrition.</p>
+                            </div>
+
+                            <table *ngIf="chatResponse" class="table" style="font-size: 15px; margin-top: 25px;">
+                                <thead>
+                                    <tr>
+                                        <th style="background: none; color: #fff;">Food</th> 
+                                        <th style="background: none; color: #fff;">Analysis</th>
+                                        <th style="background: none; color: #fff;">Reason</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of chatResponse; let index = index" style="color: #fff;">
+                                        <td width="30%" style="background: none; color: #fff;">{{data.name}}</td>
+                                        <td width="20%" style="background: none; color: #fff;">{{data.category}}</td>
+                                        <td width="50%" style="background: none; color: #fff;">{{data.reason}}
+                                            <ul>
+                                                <li *ngFor="let dataa of data.reasons; let index = index">{{dataa}}</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+                      
+                    </section>
+                  </main>
+            </div>
+        </section>
+    </main>
+</div>

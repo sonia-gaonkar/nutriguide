@@ -1,0 +1,1119 @@
+
+<div class="main-content" style="margin: 120px 190px 60px 190px; height: 75vh;">
+
+    <div class="overlay" *ngIf="showScanner">
+        <div class="overlay-content">
+          <div class="loader15"></div>
+        </div>
+      </div>
+    
+    <div class="grid itemM">  
+        <div class="card_1">
+            <div class="img-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" style=" margin-top: 15px; margin-left: 15px;" viewBox="0 0 32 32"><path fill="#ffffff" d="M26 15a6 6 0 0 0-3.107-5.253A3.98 3.98 0 0 0 24 7h-2a2 2 0 0 1-2 2a6.004 6.004 0 0 0-5.995 5.892A7 7 0 0 1 12 10a3.996 3.996 0 0 0-3-3.858V4H7v2.142A3.996 3.996 0 0 0 4 10v5H2v1a14 14 0 0 0 28 0v-1Zm-6-4a4.005 4.005 0 0 1 4 4h-8a4.005 4.005 0 0 1 4-4M6 10a2 2 0 1 1 4 0a9 9 0 0 0 1.532 5H6Zm10 18A12.017 12.017 0 0 1 4.042 17h23.917A12.017 12.017 0 0 1 16 28"/></svg>
+            </div>
+            <div class="card-text_1">
+            <div class="portada" style="background-image: url(https://img.freepik.com/premium-vector/assorted-food-items-displayed-table-2d-vector-illustration_1173418-990.jpg)">
+            
+            </div>
+            <div class="title-total">   
+                <!-- <div class="title">Ant Collector</div> -->
+                <h2 style="font-size: 22px;">Nutritional Myths & Facts</h2>
+                <div class="desc">Common misconceptions about food and nutrition versus evidence-based truths.</div>
+                <div class="actions">
+                    <button (click)="getAnalysis(AnalysisModaltemplate, 'NUTRITIONAL_MYTHS_FACTS')"><img src="assets/img/greenplay.png" style="height: 35px; margin-left: 120px;">
+                    </button>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+    </div>
+    
+    
+    <div class="grid itemM">  
+        <div class="card_1">
+            <div class="img-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" style=" margin-top: 15px; margin-left: 15px;" viewBox="0 0 32 32"><path fill="#ffffff" d="M2 28h8v2H2zm15 1a1 1 0 0 1-.78-.375L12.52 24H2v-2h11a1 1 0 0 1 .78.375l3.147 3.932l5.241-7.862A1 1 0 0 1 23.8 18.4l2.7 3.6H30v2h-4a1 1 0 0 1-.8-.4l-2.152-2.87l-5.216 7.825a1 1 0 0 1-.789.444zm-6-13v-5h1a4.005 4.005 0 0 0 4-4V4h-3a3.98 3.98 0 0 0-2.747 1.107A6 6 0 0 0 5 2H2v3a6.007 6.007 0 0 0 6 6h1v5H2v2h14v-2zm2-10h1v1a2 2 0 0 1-2 2h-1V8a2 2 0 0 1 2-2M8 9a4.005 4.005 0 0 1-4-4V4h1a4.005 4.005 0 0 1 4 4v1z"/></svg>
+            </div>
+            <div class="card-text_1">
+                <div class="portada" style="background-image: url(https://thorzt.com/wp-content/uploads/2023/03/bigstock-Water-in-Body-93882035.jpg)">
+                
+                </div>
+                <div class="title-total">   
+                    <h2 style="font-size: 22px;">Hydration Tips</h2>
+                
+                <div class="desc" style="padding-top: 38px;">Stay hydrated by drinking water regularly, eating water-rich foods. It supports your physical health & also boosts your energy!</div>
+                <div class="actions">
+                    <button (click)="getAnalysis(AnalysisModaltemplate, 'HYDRATION_TIPS')"><!-- <img src="assets/img/learnmore.png" style="width: 90px; height: 38px; margin-left: 80px;">-->
+                    <img src="assets/img/greenplay.png" style="height: 35px; margin-left: 120px;"></button>
+                </div></div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="grid itemM">  
+        <div class="card_1">
+            <div class="img-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" style=" margin-top: 15px; margin-left: 15px;" viewBox="0 0 32 32"><path fill="#ffffff" d="m23 10.414l3-3L24.586 6l-3.293 3.293A1 1 0 0 0 21 10v4h-7.074l1.143 16h8.862l1.143-16H23zM22.07 28h-5.14l-.856-12h6.852z"/><path fill="#ffffff" d="M15 1h-5a1 1 0 0 0-1 1v7.37c-1.067.606-3 2.178-3 5.63v14a1 1 0 0 0 1 1h5v-2H8V15c0-3.754 3-4.28 3-4.28V3h3v7h2V2a1 1 0 0 0-1-1"/></svg>
+            </div>
+            <div class="card-text_1">
+                <div class="portada" style="background-image: url(https://img-c.udemycdn.com/course/750x422/5223760_55d0.jpg)">
+                
+                </div>
+                <div class="title-total">   
+                    <h2 style="font-size: 22px;">Nutritional Category</h2>
+                
+                    <div class="desc">Classification of foods based on their similar nutrient profiles and health benefits, based on your health profile.</div>
+                    <div class="actions">
+                        <button (click)="getAnalysis(AnalysisModaltemplate, 'FOOD_GROUP_OVERVIEW')"><img src="assets/img/greenplay.png" style="height: 35px; margin-left: 120px;"></button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    
+    <div class="grid itemM">  
+        <div class="card_1">
+            <div class="img-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" style=" margin-top: 15px; margin-left: 15px;" viewBox="0 0 32 32"><path fill="#ffffff" d="M12 6H8V2H6v4H2v2h4v4h2V8h4z"/><path fill="#ffffff" d="m29.919 16.606l-3-7A1 1 0 0 0 26 9h-3V7a1 1 0 0 0-1-1h-7v2h6v12.556A4 4 0 0 0 19.142 23h-6.284a3.98 3.98 0 0 0-7.716 0H4v-9H2v10a1 1 0 0 0 1 1h2.142a3.98 3.98 0 0 0 7.716 0h6.284a3.98 3.98 0 0 0 7.716 0H29a1 1 0 0 0 1-1v-7a1 1 0 0 0-.081-.394M9 26a2 2 0 1 1 2-2a2.003 2.003 0 0 1-2 2m14-15h2.34l2.144 5H23Zm0 15a2 2 0 1 1 2-2a2 2 0 0 1-2 2m5-3h-1.142A3.995 3.995 0 0 0 23 20v-2h5Z"/></svg>
+            </div>
+            <div class="card-text_1">
+                <div class="portada" style="background-image: url(assets/img/weeklyexeplan.jpg)">                
+                </div>
+                <div class="title-total">   
+                    <h2 style="font-size: 22px;">Weekly Exercise Plan</h2>
+                
+                    <div class="desc">A weekly exercise plan for your profile to promote overall fitness and recovery.</div>
+                    <div class="actions">
+                        <button (click)="getAnalysis(AnalysisModaltemplate, 'WEEKLY_EXCERSIZE_PLAN')"><img src="assets/img/greenplay.png" style="height: 35px; margin-left: 120px;"></button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    
+    <div class="grid itemM">  
+        <div class="card_1">
+            <div class="img-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" style=" margin-top: 15px; margin-left: 15px;" viewBox="0 0 32 32"><path fill="#ffffff" d="M28 16v6H4V6h7V4H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h8v4H8v2h16v-2h-4v-4h8a2 2 0 0 0 2-2v-6ZM18 28h-4v-4h4Z"/><path fill="#ffffff" d="M18 18h-.01a1 1 0 0 1-.951-.725L15.246 11H11V9h5a1 1 0 0 1 .962.725l1.074 3.76l3.009-9.78A1.01 1.01 0 0 1 22 3a.98.98 0 0 1 .949.684L24.72 9H30v2h-6a1 1 0 0 1-.949-.684l-1.013-3.04l-3.082 10.018A1 1 0 0 1 18 18"/></svg>
+            </div>
+            <div class="card-text_1">
+                <div class="portada" style="background-image: url(assets/img/weeklydietplan.jpg)">                
+                </div>
+                <div class="title-total">   
+                    <h2 style="font-size: 22px;">Weekly Diet Plan</h2>
+                
+                <div class="desc">Weekly meal plan tailored to your profile.</div>
+                <div class="actions">
+                    <button (click)="getAnalysis(AnalysisModaltemplate, 'WEEKLY_DIET_PLAN')"><img src="assets/img/greenplay.png" style="height: 35px; margin-left: 120px;"></button>
+                </div></div>
+            </div>
+        </div>    
+    </div>
+    
+    <div class="grid itemM">  
+        <div class="card_1">
+            <div class="img-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" style=" margin-top: 15px; margin-left: 15px;" viewBox="0 0 32 32"><path fill="#ffffff" d="M14 24a1 1 0 0 1-.961-.725L11.246 17H8v-2h4a1 1 0 0 1 .961.725L14 19.36l3.039-10.635a1 1 0 0 1 1.922 0L20.754 15H24v2h-4a1 1 0 0 1-.961-.725L18 12.64l-3.039 10.635A1 1 0 0 1 14 24"/><path fill="#ffffff" d="M16 31a1 1 0 0 1-.504-.136l-12-7A1 1 0 0 1 3 23V9a1 1 0 0 1 .496-.864l12-7a1 1 0 0 1 1.008 0l12 7l-1.008 1.728L16 3.158L5 9.574v12.852l11 6.417l11-6.417V15h2v8a1 1 0 0 1-.496.864l-12 7A1 1 0 0 1 16 31"/></svg>
+            </div>
+            <div class="card-text_1">
+                <div class="portada" style="background-image: url(assets/img/seasonalfruits.png)">
+                
+                </div>
+                <div class="title-total">   
+                    <h2 style="font-size: 22px;">Seasonal Food Guide</h2>
+                
+                <div class="desc">Seasonal food guide tailored to your health profile and medical condition.</div>
+                <div class="actions">
+                    <button (click)="getAnalysis(AnalysisModaltemplate, 'SEASONAL_FOOD_GUIDE')"><img src="assets/img/greenplay.png" style="height: 35px; margin-left: 120px;"></button>
+                </div></div>
+            </div>
+        </div>    
+    </div>
+    
+    
+    
+<!--     <div class="plan">
+		<div class="inner">
+			<span class="pricing">
+				<span>
+					$49 <small>/ m</small>
+				</span>
+			</span>
+			<p class="title">Professional</p>
+			<p class="info">This plan is for those who have a team already and running a large business.</p>
+			<ul class="features">
+				<li>
+					<span class="icon">
+						<svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0h24v24H0z" fill="none"></path>
+							<path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+						</svg>
+					</span>
+					<span><strong>20</strong> team members</span>
+				</li>
+				<li>
+					<span class="icon">
+						<svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0h24v24H0z" fill="none"></path>
+							<path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+						</svg>
+					</span>
+					<span>Plan <strong>team meetings</strong></span>
+				</li>
+				<li>
+					<span class="icon">
+						<svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0h24v24H0z" fill="none"></path>
+							<path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+						</svg>
+					</span>
+					<span>File sharing</span>
+				</li>
+			</ul>
+			<div class="action">
+			<a class="button" href="#">
+				Choose plan
+			</a>
+			</div>
+		</div>
+	</div>
+
+    <br><br><br> -->
+
+
+<!-- <div class="site__wrapper">
+        <div class="grid">
+            <div class="card">
+              <div class="card__image">
+                <img src="https://unsplash.it/400/608?image=123" alt="">
+  
+                <div class="card__overlay card__overlay--indigo">
+                  <div class="card__overlay-content">
+                    <ul class="card__meta">
+                      <li><a href="#0"><i class="fa fa-tag"></i> Html5/Css3</a></li>
+                      <li><a href="#0"><i class="fa fa-clock-o"></i> 2 min ago</a></li>
+                    </ul>
+  
+                    <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+  
+                    <ul class="card__meta card__meta--last">
+                      <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                      <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  
+        <div class="grid">
+            <div class="card">
+              <div class="card__image">
+                <img src="https://unsplash.it/400/300?image=100" alt="">
+  
+                <div class="card__overlay card__overlay--blue">
+                  <div class="card__overlay-content">
+                    <ul class="card__meta">
+                      <li><a href="#0"><i class="fa fa-tag"></i> UI/UX</a></li>
+                      <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+                    </ul>
+  
+                    <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+  
+                    <ul class="card__meta card__meta--last">
+                      <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                      <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  
+        <div class="grid">
+            <div class="card">
+              <div class="card__image">
+                <img src="https://unsplash.it/400/300?image=200" alt="">
+  
+                <div class="card__overlay card__overlay--indigo">
+                  <div class="card__overlay-content">
+                  <ul class="card__meta">
+                      <li><a href="#0"><i class="fa fa-tag"></i> UI/UX</a></li>
+                      <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+                    </ul>
+  
+                    <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+  
+                    <ul class="card__meta card__meta--last">
+                      <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                      <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                    </ul>    
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  
+        <div class="grid">
+            <div class="card">
+              <div class="card__image">
+                <img src="https://unsplash.it/400/300?image=300" alt="">
+  
+                <div class="card__overlay card__overlay--indigo">
+                  <div class="card__overlay-content">
+                    <ul class="card__meta">
+                      <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
+                      <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+                    </ul>
+  
+                    <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+  
+                    <ul class="card__meta card__meta--last">
+                      <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                      <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                    </ul>   
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  
+        <div class="grid">
+            <div class="card">
+              <div class="card__image">
+                <img src="https://unsplash.it/400/300?image=400" alt="">
+  
+                <div class="card__overlay card__overlay--blue">
+                  <div class="card__overlay-content">
+                    <ul class="card__meta">
+                      <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
+                      <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+                    </ul>
+  
+                    <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+  
+                    <ul class="card__meta card__meta--last">
+                      <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                      <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                    </ul>   
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>		
+
+  
+        <div class="grid">
+            
+        </div>
+
+        <div class="grid">
+            <div class="card">
+              <div class="card__image">
+                <img src="https://unsplash.it/400/300?image=100" alt="">
+  
+                <div class="card__overlay card__overlay--blue">
+                  <div class="card__overlay-content">
+                    <ul class="card__meta">
+                      <li><a href="#0"><i class="fa fa-tag"></i> UI/UX</a></li>
+                      <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+                    </ul>
+  
+                    <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+  
+                    <ul class="card__meta card__meta--last">
+                      <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                      <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+       
+</div> -->
+  
+
+
+
+</div>
+
+
+<ng-template #AnalysisModaltemplate>
+    <div class="modal-header icon-boxes" style="background-color: #1acc8d;">
+      <h5 style="font-weight: 600; color: #fff;"><a>{{analysisTitle}}</a></h5>
+    </div>
+    <div id="scrollbar1" class="modal-body" style="max-height: calc(100vh - 200px); overflow-y: auto; padding: 20px 30px; font-size: 13px;">
+        
+        <!-- NUTRITIONAL_MYTHS_FACTS -->
+        <table *ngIf="analysisAction=='NUTRITIONAL_MYTHS_FACTS'" class="table table-striped table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>#</th> <th>Myth</th> <th>Fact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of analysisData; let index = index">
+                    <td width="5%">{{index+1}}</td>
+                    <td width="45%">{{data.myth}}</td>
+                    <td width="50%">{{data.fact}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- HYDRATION_TIPS -->
+        <div *ngIf="analysisAction=='HYDRATION_TIPS'">
+            <ul class="list-group">
+                <li class="list-group-item active">Tips to replenish yourself</li>
+                <li class="list-group-item" *ngFor="let data of analysisData.hydration_tips; let index = index">{{data}}</li>
+            </ul>
+            <br />
+        </div>
+
+        <!-- FOOD_GROUP_OVERVIEW -->
+        <table *ngIf="analysisAction=='FOOD_GROUP_OVERVIEW'" class="table table-striped table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>Food Category</th> 
+                    <th>Classification</th>
+                    <th>Nutritional Benefits</th>
+                    <th>Recommended Daily Servings</th>
+                    <th>Examples</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of analysisData; let index = index">
+                    <td width="20%">{{data.group_name}}</td>
+                    <td width="20%">{{data.classification}}</td>
+                    <td width="30%">{{data.nutritional_benefits}}</td>
+                    <td width="10%">{{data.recommended_daily_servings}}</td>
+                    <td width="20%">
+                        <ul>
+                            <li *ngFor="let data of data.examples; let index = index">{{data}}</li>
+                        </ul>
+                    </td>                    
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- WEEKLY_EXCERSIZE_PLAN -->
+        <div *ngIf="analysisAction=='WEEKLY_EXCERSIZE_PLAN'">
+            <div class="row" style="font-size: 14px;">
+                <div class="col-sm-4">
+                    <div class="card" style="height: 300px; margin-bottom: 25px;">
+                        <div class="card-header"><h5>Monday</h5></div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><b>Activity Type:</b> {{analysisData.Monday.activity_type}}</li>
+                                <li class="list-group-item"><b>Duration (in mins):</b> {{analysisData.Monday.duration_minutes}}</li>
+                                <li class="list-group-item"><b>Intensity Level:</b> {{analysisData.Monday.intensity_level}}</li>
+                                <li class="list-group-item"><b>Specific Activity:</b> {{analysisData.Monday.specific_activity}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card" style="height: 300px; margin-bottom: 25px;">
+                        <div class="card-header"><h5>Tuesday</h5></div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><b>Activity Type:</b> {{analysisData.Tuesday.activity_type}}</li>
+                                <li class="list-group-item"><b>Duration (in mins):</b> {{analysisData.Tuesday.duration_minutes}}</li>
+                                <li class="list-group-item"><b>Intensity Level:</b> {{analysisData.Tuesday.intensity_level}}</li>
+                                <li class="list-group-item"><b>Specific Activity:</b> {{analysisData.Tuesday.specific_activity}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card" style="height: 300px; margin-bottom: 25px;">
+                        <div class="card-header"><h5>Wednesday</h5></div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><b>Activity Type:</b> {{analysisData.Wednesday.activity_type}}</li>
+                                <li class="list-group-item"><b>Duration (in mins):</b> {{analysisData.Wednesday.duration_minutes}}</li>
+                                <li class="list-group-item"><b>Intensity Level:</b> {{analysisData.Wednesday.intensity_level}}</li>
+                                <li class="list-group-item"><b>Specific Activity:</b> {{analysisData.Wednesday.specific_activity}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card" style="height: 300px; margin-bottom: 25px;">
+                        <div class="card-header"><h5>Thursday</h5></div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><b>Activity Type:</b> {{analysisData.Thursday.activity_type}}</li>
+                                <li class="list-group-item"><b>Duration (in mins):</b> {{analysisData.Thursday.duration_minutes}}</li>
+                                <li class="list-group-item"><b>Intensity Level:</b> {{analysisData.Thursday.intensity_level}}</li>
+                                <li class="list-group-item"><b>Specific Activity:</b> {{analysisData.Thursday.specific_activity}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card" style="height: 300px; margin-bottom: 25px;">
+                        <div class="card-header"><h5>Friday</h5></div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><b>Activity Type:</b> {{analysisData.Friday.activity_type}}</li>
+                                <li class="list-group-item"><b>Duration (in mins):</b> {{analysisData.Friday.duration_minutes}}</li>
+                                <li class="list-group-item"><b>Intensity Level:</b> {{analysisData.Friday.intensity_level}}</li>
+                                <li class="list-group-item"><b>Specific Activity:</b> {{analysisData.Friday.specific_activity}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card" style="height: 300px; margin-bottom: 25px;">
+                        <div class="card-header"><h5>Saturday</h5></div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><b>Activity Type:</b> {{analysisData.Saturday.activity_type}}</li>
+                                <li class="list-group-item"><b>Duration (in mins):</b> {{analysisData.Saturday.duration_minutes}}</li>
+                                <li class="list-group-item"><b>Intensity Level:</b> {{analysisData.Saturday.intensity_level}}</li>
+                                <li class="list-group-item"><b>Specific Activity:</b> {{analysisData.Saturday.specific_activity}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="card" style="height: 300px; margin-bottom: 25px;">
+                        <div class="card-header"><h5>Sunday</h5></div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><b>Activity Type:</b> {{analysisData.Sunday.activity_type}}</li>
+                                <li class="list-group-item"><b>Duration (in mins):</b> {{analysisData.Sunday.duration_minutes}}</li>
+                                <li class="list-group-item"><b>Intensity Level:</b> {{analysisData.Sunday.intensity_level}}</li>
+                                <li class="list-group-item"><b>Specific Activity:</b> {{analysisData.Sunday.specific_activity}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+
+        <!-- WEEKLY_DIET_PLAN -->
+        <div *ngIf="analysisAction=='WEEKLY_DIET_PLAN'">
+
+            <div class="accordion" id="accordionExample" style="font-size: 13px;">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Monday
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Breakfast</th>
+                                    <th>Lunch</th> 
+                                    <th>Snacks</th>
+                                    <th>Dinner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Monday.Breakfast.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Monday.Breakfast['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Monday.Breakfast.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Monday.Lunch.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Monday.Lunch['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Monday.Lunch.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Monday['Snack 1'].Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Monday['Snack 1']['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Monday['Snack 1'].Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Monday.Dinner.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Monday.Dinner['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Monday.Dinner.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Tuesday
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Breakfast</th>
+                                    <th>Lunch</th> 
+                                    <th>Snacks</th>
+                                    <th>Dinner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Tuesday.Breakfast.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Tuesday.Breakfast['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Tuesday.Breakfast.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Tuesday.Lunch.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Tuesday.Lunch['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Tuesday.Lunch.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Tuesday['Snack 1'].Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Tuesday['Snack 1']['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Tuesday['Snack 1'].Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Tuesday.Dinner.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Tuesday.Dinner['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Tuesday.Dinner.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Wednesday
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Breakfast</th>
+                                    <th>Lunch</th> 
+                                    <th>Snacks</th>
+                                    <th>Dinner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Wednesday.Breakfast.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Wednesday.Breakfast['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Wednesday.Breakfast.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Wednesday.Lunch.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Wednesday.Lunch['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Wednesday.Lunch.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Wednesday['Snack 1'].Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Wednesday['Snack 1']['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Wednesday['Snack 1'].Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Wednesday.Dinner.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Wednesday.Dinner['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Wednesday.Dinner.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading4">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        Thursday
+                      </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Breakfast</th>
+                                    <th>Lunch</th> 
+                                    <th>Snacks</th>
+                                    <th>Dinner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Thursday.Breakfast.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Thursday.Breakfast['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Thursday.Breakfast.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Thursday.Lunch.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Thursday.Lunch['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Thursday.Lunch.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Thursday['Snack 1'].Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Thursday['Snack 1']['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Thursday['Snack 1'].Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Thursday.Dinner.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Thursday.Dinner['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Thursday.Dinner.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading5">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        Friday
+                      </button>
+                    </h2>
+                    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Breakfast</th>
+                                    <th>Lunch</th> 
+                                    <th>Snacks</th>
+                                    <th>Dinner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Friday.Breakfast.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Friday.Breakfast['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Friday.Breakfast.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Friday.Lunch.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Friday.Lunch['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Friday.Lunch.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Friday['Snack 1'].Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Friday['Snack 1']['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Friday['Snack 1'].Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Friday.Dinner.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Friday.Dinner['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Friday.Dinner.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading6">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        Saturday
+                      </button>
+                    </h2>
+                    <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Breakfast</th>
+                                    <th>Lunch</th> 
+                                    <th>Snacks</th>
+                                    <th>Dinner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Saturday.Breakfast.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Saturday.Breakfast['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Saturday.Breakfast.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Saturday.Lunch.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Saturday.Lunch['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Saturday.Lunch.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Saturday['Snack 1'].Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Saturday['Snack 1']['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Saturday['Snack 1'].Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Saturday.Dinner.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Saturday.Dinner['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Saturday.Dinner.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading7">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        Sunday
+                      </button>
+                    </h2>
+                    <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Breakfast</th>
+                                    <th>Lunch</th> 
+                                    <th>Snacks</th>
+                                    <th>Dinner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Sunday.Breakfast.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Sunday.Breakfast['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Sunday.Breakfast.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Sunday.Lunch.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Sunday.Lunch['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Sunday.Lunch.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Sunday['Snack 1'].Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Sunday['Snack 1']['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Sunday['Snack 1'].Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Meal:</b> {{analysisData.Sunday.Dinner.Meal}}</li>
+                                            <li class="list-group-item"><b>Portion Size:</b> {{analysisData.Sunday.Dinner['Portion Size']}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{analysisData.Sunday.Dinner.Ingredients}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+
+
+        <!-- SEASONAL_FOOD_GUIDE -->
+        <div *ngIf="analysisAction=='SEASONAL_FOOD_GUIDE'">
+            <!-- <li *ngFor="let item of userData.medical_condition | keyvalue">
+                {{item.key}}
+              </li> -->
+            <div class="accordion" id="accordionExample" style="font-size: 13px;">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size: 18px;">
+                        Spring
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Fruits & Veggies</th>
+                                    <th>Recipes</th> 
+                                    <th>Tips</th>
+                                    <th>Local Farms/Markets</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.spring.fruits_and_vegetables; let index = index" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"><b>Name:</b> {{data.name}}</li>
+                                            <li class="list-group-item"><b>Taste:</b> {{data.taste}}</li>
+                                            <li class="list-group-item"><b>Nutritional Benefits:</b> {{data.nutritional_benefits}}</li>
+                                            <li class="list-group-item"><b>Popular Uses:</b> {{data.popular_uses}}</li>
+                                        </ul>
+                                        <br><br>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.spring.recipes" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"><b>Name:</b> {{data.name}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{data.ingredients}}
+                                               <!--  <ul class="list-group list-group-flush" *ngFor="let data1 of data.ingredients">
+                                                    <li class="list-group-item"><b>Name:</b> {{data1}}</li>
+                                                </ul> -->
+                                            </li>
+                                            <li class="list-group-item"><b>Description:</b> {{data.description}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.spring.tips" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"><b>Tip:</b> {{data.tip}}</li>
+                                            <li class="list-group-item"><b>Storage:</b> {{data.storage}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let dataa of analysisData.spring.local_farms_or_markets" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"> {{dataa}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2" style="font-size: 18px;">
+                        Summer
+                    </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Fruits & Veggies</th>
+                                    <th>Recipes</th> 
+                                    <th>Tips</th>
+                                    <th>Local Farms/Markets</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.summer.fruits_and_vegetables; let index = index" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"><b>Name:</b> {{data.name}}</li>
+                                            <li class="list-group-item"><b>Taste:</b> {{data.taste}}</li>
+                                            <li class="list-group-item"><b>Nutritional Benefits:</b> {{data.nutritional_benefits}}</li>
+                                            <li class="list-group-item"><b>Popular Uses:</b> {{data.popular_uses}}</li>
+                                        </ul>
+                                        <br><br>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.summer.recipes" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"><b>Name:</b> {{data.name}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{data.ingredients}}
+                                                <!-- <ul class="list-group list-group-flush" *ngFor="let data1 of data.ingredients">
+                                                    <li class="list-group-item"><b>Name:</b> {{data1}}</li>
+                                                </ul> -->
+                                            </li>
+                                            <li class="list-group-item"><b>Description:</b> {{data.description}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.summer.tips" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"><b>Tip:</b> {{data.tip}}</li>
+                                            <li class="list-group-item"><b>Storage:</b> {{data.storage}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.summer.local_farms_or_markets" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"> {{data}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3" style="font-size: 18px;">
+                        Fall
+                    </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Fruits & Veggies</th>
+                                    <th>Recipes</th> 
+                                    <th>Tips</th>
+                                    <th>Local Farms/Markets</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.fall.fruits_and_vegetables; let index = index" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"><b>Name:</b> {{data.name}}</li>
+                                            <li class="list-group-item"><b>Taste:</b> {{data.taste}}</li>
+                                            <li class="list-group-item"><b>Nutritional Benefits:</b> {{data.nutritional_benefits}}</li>
+                                            <li class="list-group-item"><b>Popular Uses:</b> {{data.popular_uses}}</li>
+                                        </ul>
+                                        <br><br>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.fall.recipes" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"><b>Name:</b> {{data.name}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{data.ingredients}}
+                                                <!-- <ul class="list-group list-group-flush" *ngFor="let data1 of data.ingredients">
+                                                    <li class="list-group-item"><b>Name:</b> {{data1}}</li>
+                                                </ul> -->
+                                            </li>
+                                            <li class="list-group-item"><b>Description:</b> {{data.description}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.fall.tips" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"><b>Tip:</b> {{data.tip}}</li>
+                                            <li class="list-group-item"><b>Storage:</b> {{data.storage}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.fall.local_farms_or_markets" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"> {{data}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4" style="font-size: 18px;">
+                        Winter
+                    </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Fruits & Veggies</th>
+                                    <th>Recipes</th> 
+                                    <th>Tips</th>
+                                    <th>Local Farms/Markets</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.winter.fruits_and_vegetables; let index = index" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"><b>Name:</b> {{data.name}}</li>
+                                            <li class="list-group-item"><b>Taste:</b> {{data.taste}}</li>
+                                            <li class="list-group-item"><b>Nutritional Benefits:</b> {{data.nutritional_benefits}}</li>
+                                            <li class="list-group-item"><b>Popular Uses:</b> {{data.popular_uses}}</li>
+                                        </ul>
+                                        <br><br>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.winter.recipes" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"><b>Name:</b> {{data.name}}</li>
+                                            <li class="list-group-item"><b>Ingredients:</b> {{data.ingredients}}
+                                                <!-- <ul class="list-group list-group-flush" *ngFor="let data1 of data.ingredients">
+                                                    <li class="list-group-item"><b>Name:</b> {{data1}}</li>
+                                                </ul> -->
+                                            </li>
+                                            <li class="list-group-item"><b>Description:</b> {{data.description}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.winter.tips" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"><b>Tip:</b> {{data.tip}}</li>
+                                            <li class="list-group-item"><b>Storage:</b> {{data.storage}}</li>
+                                        </ul>
+                                    </td>
+                                    <td width="25%">
+                                        <ul class="list-group list-group-flush" *ngFor="let data of analysisData.winter.local_farms_or_markets" style="margin-bottom: 20px;">
+                                            <li class="list-group-item"> {{data}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+    </div>
+</ng-template>

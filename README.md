@@ -1,5 +1,3 @@
-### README.md Template
-
 # Nutriguide
 
 ## Overview

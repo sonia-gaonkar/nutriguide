@@ -38,19 +38,11 @@ export class AdvisorComponent {
     this.serverurl = this.CommonService.getServerURL();
 
     this.token = this.storage.get('TOKEN');
-    console.log('.........token..................',  this.token)
-
     this.userData = await this.CommonService.getUserbyId(this.token.id)
-
-    console.log('........ this.userData..xxxxxx......',  this.userData)
-
     delete this.userData["username"];
     delete this.userData["_id"];
     delete this.userData["password"];
     delete this.userData["email"];
-
-    console.log('........ this.userData..1111111111111111111111111......',  this.userData)
-
   }
 
   async submitChat(form: NgForm) {
@@ -77,8 +69,6 @@ export class AdvisorComponent {
     this.chatResponse = "";
     this.chatquery = form.value.chatQuery;
     this.showspinner = true;
-    console.log('................................----------',  form.value)
-
 
     //post body
     let formDataTemp: any = {};

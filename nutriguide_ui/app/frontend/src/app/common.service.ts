@@ -21,9 +21,6 @@ export class CommonService {
 
   async getUserbyId(id: any){
 		let userData: any = await this.http.get(`${this.serverurl}data/users/${id}`, {}).toPromise();
-
-    console.log('..........userData.....######################..........', userData.users[0])
-
     return userData.users[0];
 
   }

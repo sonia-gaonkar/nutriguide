@@ -13,13 +13,10 @@ sys.path.append(HOME_PATH)
 #watsonx libraries
 from ibm_watson_machine_learning.foundation_models import Model
 from utils.configuration_utils import get_logger
-from utils.latch import CountDownLatch
-import pandas as pd
 import json
 
 
 logger = get_logger('Content Search')
-latch = CountDownLatch(5)
 
 global search_cache
 search_cache = {}

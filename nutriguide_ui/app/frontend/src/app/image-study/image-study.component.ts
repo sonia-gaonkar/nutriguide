@@ -50,8 +50,6 @@ export class ImageStudyComponent {
     this.chatResponse = "";
     this.chatquery = form.value.chatQuery;
     this.showspinner = true;
-    console.log('................................----------',  form.value)
-
 
     //post body
     let formDataTemp: any = {};
@@ -81,9 +79,6 @@ export class ImageStudyComponent {
       let watsonxpredictions = (<any>res).watsonxdata.predictions[0];
       this.chatResponse = watsonxpredictions.food_items;
 
-      console.log('..................this.chatResponse.^^^^^^^.............----------',  this.chatResponse)
-
-      //this.chatResponse = this.chatResponse.replace(/(?:\r\n|\r|\n)/g, '<br>');
     }
 
   }

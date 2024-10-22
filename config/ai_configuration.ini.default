@@ -4,7 +4,7 @@ port=7050
 host=0.0.0.0
 log_file_name=controller
 
-# configuration for feature extraction service
+# configuration for content_search service
 [Content Search]
 port=7060
 host=0.0.0.0
@@ -26,9 +26,6 @@ log_path=<log-path>
 path=<certificate-path>
 cert_file_name=ca.crt
 key_file_name=ca.key
-
-[DB_CONF]
-db_path=<db-path>
 
 [WATSON_CONF]
 project_id=

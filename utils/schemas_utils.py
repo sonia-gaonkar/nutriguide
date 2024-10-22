@@ -14,6 +14,10 @@ class PredictionIn(BaseModel):
     """Used for prediction requests."""
     entries: List[Dict]
 
+class CtrServicesOut(BaseModel):
+    """Used for controller get services response."""
+    services: Dict
+
 class AIPredictionOut(BaseModel):
     """Used for service prediction response."""
     predictions: List[Dict]
@@ -25,4 +29,5 @@ class AnalysisNutritionsIn(BaseModel):
     query : str = None
     action : str
     entries: List[Dict] = None
+    food_item : str = None
 

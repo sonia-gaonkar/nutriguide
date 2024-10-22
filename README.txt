@@ -26,6 +26,7 @@ To deploy the AI integration services, proceed as follows.
 		- project_id=
 		- api_key=
 		- url=
+	3.3 Change the HOST with your VM's ip address in /config/ai_configuration.ini.default file.
 
 4. Start the AI services by running following script.
 	- Python 3.x.x configure_env.py to configure logs

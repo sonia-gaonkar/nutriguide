@@ -82,16 +82,14 @@ def predict(data: schemas.AnalysisNutritionsIn, authorization: str = Header(...)
             }
             
             # Replacing input values into prompt
-            prompt_txt = f"""Analyze the given input image and identify all food items present. Categorize these food items based on their impact on women's health with PCOD/PCOS into two categories: 'Good' and 'Bad.' For each food item, explain why it is categorized as good or bad for managing PCOD/PCOS. Take into account factors such as glycemic index, hormone regulation, inflammation, and overall nutritional value. Provide a detailed analysis explaining how these foods influence PCOD symptoms either positively or negatively.\nGenerated output should be in JSON format only.Do not add ``` at start or end of result.\nInput:{image_url}\nOutput:"""
-            
+            prompt_txt = f"""Analyze the given input image and identify all food items present. Categorize these food items based on their impact on women's health with PCOD/PCOS into two categories: 'Healthy' and 'Not Recommended.' For each food item, explain why it is categorized as healthy or not recommended for managing PCOD/PCOS. Take into account factors such as glycemic index, hormone regulation, inflammation, and overall nutritional value. Provide a detailed analysis explaining how these foods influence PCOD symptoms either positively or negatively.\nGenerated output should be in JSON format only.Do not add ``` or any note at start or end of result.\nInput:{image_url}\nOutput:"""
             #This is for performance optimization. We had stored this key and object of LLM model into a dict and used in future
             const_model = str(project_id) + '_' + str(model_id) + '_' + action + '_' + str(max_tokens)
         
-        case 'WEEKLY_DIET_PLAN' :
+        case 'WEEKLY_DIET_PLAN':
             personal_data = data.entries
             max_tokens = 3000
             model_id = "meta-llama/llama-3-2-90b-vision-instruct"
-            #model_id = "mistralai/mixtral-8x7b-instruct-v01"
             gen_parms   = {
                                 "decoding_method": "greedy",
                                 "max_new_tokens": max_tokens,
@@ -99,9 +97,24 @@ def predict(data: schemas.AnalysisNutritionsIn, authorization: str = Header(...)
                                 "repetition_penalty": 1.11
                         }
             
-            # Replacing input values into prompt
-            prompt_txt = f"""Create a weekly diet plan for a {personal_data[0]}. Focus on balanced meals that promote hormonal balance and avoid foods that could aggravate PCOS symptoms. Please ensure each day includes three meals and two snacks, with clear portion sizes and nutritional balance. Additionally, suggest foods rich in fiber, lean proteins, and low-glycemic index carbs. Avoid processed foods, sugary drinks, and excessive dairy. Incorporate a variety of vegetables, whole grains, and herbal teas. Include any recommendations for supplements or hydration.Output should be only in JSON format.Do not add ``` at start or end of result."""
+            # Desired output format
+            OUTPUT_FORMAT = {"Day":{"Breakfast":{"meal":"","portion_size":"","nutritional_balance":""},"Lunch":{"meal":"","portion_size":"","nutritional_balance":""},"Dinner":{"meal":"","portion_size":"","nutritional_balance":""},"Snack1":{"meal":"","portion_size":"","nutritional_balance":""},"Snack2":{"meal":"","portion_size":"","nutritional_balance":""}}}
             
+            # Replacing input values into prompt
+            prompt_txt = f"""Create a weekly diet plan for a {personal_data[0]},
+                            -Consider balanced diet including necessary nutrition to improve person health. 
+                            -Consider all data mentioned about person while making diet plan.
+                            -Output should contain diet plan for all days of week.
+                            -Consider local food items available in that geographical region while planning meals, for that consider country, state mentioned in personal data.          
+                            -Ensure each day includes three meals and  snack1 and snack2, with clear meal, portion_ size(how much to eat per serving) and nutritional_balance (Nutrition content with values) as dictionary .
+                            -Include any recommendations for supplements or hydration. 
+                            -Output should be only in JSON format following given output format. Strictly do not add ``` at start or end of result, It should be valid JSON.
+                            -Do not add ''' at start or end of the result, Do not add any explanation or code.
+                            -Strictly follow given output format for all days of week.
+                            Output Format : {OUTPUT_FORMAT}
+
+                            Output:
+			"""
             #This is for performance optimization. We had stored this key and object of LLM model into a dict and used in future
             const_model = str(project_id) + '_' + str(model_id) + '_' + action + '_' + str(max_tokens)
         
@@ -109,7 +122,6 @@ def predict(data: schemas.AnalysisNutritionsIn, authorization: str = Header(...)
             personal_data = data.entries
             max_tokens = 3000
             model_id = "meta-llama/llama-3-2-90b-vision-instruct"
-            #model_id = "mistralai/mixtral-8x7b-instruct-v01"
             gen_parms   = {
                                 "decoding_method": "greedy",
                                 "max_new_tokens": max_tokens,
@@ -127,7 +139,6 @@ def predict(data: schemas.AnalysisNutritionsIn, authorization: str = Header(...)
             personal_data = data.entries
             max_tokens = 2000
             model_id = "meta-llama/llama-3-2-90b-vision-instruct"
-            #model_id = "mistralai/mixtral-8x7b-instruct-v01"
             gen_parms   = {
                                 "decoding_method": "greedy",
                                 "max_new_tokens": max_tokens,
@@ -145,7 +156,6 @@ def predict(data: schemas.AnalysisNutritionsIn, authorization: str = Header(...)
             personal_data = data.entries
             max_tokens = 2000
             model_id = "meta-llama/llama-3-2-90b-vision-instruct"
-            #model_id = "mistralai/mixtral-8x7b-instruct-v01"
             gen_parms   = {
                                 "decoding_method": "greedy",
                                 "max_new_tokens": max_tokens,
@@ -163,7 +173,6 @@ def predict(data: schemas.AnalysisNutritionsIn, authorization: str = Header(...)
             personal_data = data.entries
             max_tokens = 2000
             model_id = "meta-llama/llama-3-2-90b-vision-instruct"
-            #model_id = "mistralai/mixtral-8x7b-instruct-v01"
             gen_parms   = {
                                 "decoding_method": "greedy",
                                 "max_new_tokens": max_tokens,
@@ -181,7 +190,6 @@ def predict(data: schemas.AnalysisNutritionsIn, authorization: str = Header(...)
             personal_data = data.entries
             max_tokens = 4000
             model_id = "meta-llama/llama-3-2-90b-vision-instruct"
-            #model_id = "mistralai/mixtral-8x7b-instruct-v01"
             gen_parms   = {
                                 "decoding_method": "greedy",
                                 "max_new_tokens": max_tokens,
@@ -192,9 +200,23 @@ def predict(data: schemas.AnalysisNutritionsIn, authorization: str = Header(...)
             #This is for performance optimization. We had stored this key and object of LLM model into a dict and used in future
             const_model = str(project_id) + '_' + str(model_id) + '_' + action + '_' + str(max_tokens)
             
+            output_format = """{"seasonal_food_guide":{"Spring":{"fruits_and_vegetables":[{"name":"","taste":"","nutritional_benefits":"","popular_uses":""}],"recipes":[{"name":"","ingredients":[],"description":""}],"tips":[{"tip":"","storage":""}],"local_farms_or_markets":["",""]},"Summer":{"fruits_and_vegetables":[],"recipes":[],"tips":[],"local_farms_or_markets":[]},"Fall":{"fruits_and_vegetables":[],"recipes":[],"tips":[],"local_farms_or_markets":[]},"Winter":{"fruits_and_vegetables":[],"recipes":[],"tips":[],"local_farms_or_markets":[]}}}"""
             # Replacing input values into prompt
-            prompt_txt = f"Create a seasonal food guide that highlights the best fruits, vegetables, and other produce available in each season (spring, summer, fall, and winter) for {personal_data[0]} personal information of a person. For each season, include the following:\n\nA list of 5-10 seasonal fruits and vegetables, with brief descriptions of their taste, nutritional benefits, and popular uses.\nA selection of 2-3 seasonal recipes that showcase these ingredients.\nTips for selecting, storing, and preparing each type of produce.\nInformation on local farms or markets where these seasonal foods can be sourced.\nMake sure the guide is engaging and encourages readers to explore seasonal eating.\nOutput should be only in JSON format. Do not add any heading, extra information or note/json keyword."
+            prompt_txt = f"Create a seasonal food guide that highlights the best fruits, vegetables, and other produce available in each season (spring, summer, fall, and winter) for {personal_data[0]} personal information of a person. For each season, include the following:\n\nA list of 5-10 seasonal fruits and vegetables, with brief descriptions of their taste, nutritional benefits, and popular uses.\nA selection of 2-3 seasonal recipes that showcase these ingredients.\nOutput should be only in JSON format following given output format. Strictly do not add ``` at start or end of result, It should be valid JSON.\nTips for selecting, storing, and preparing each type of produce.\nInformation on local farms or markets where these seasonal foods can be sourced.\nMake sure the guide is engaging and encourages readers to explore seasonal eating.\nOutput should be only in JSON format with seasonal_food_guide : []. Do not add any heading, extra information or note/json keyword.\nOutput Format : {output_format}\n\nOutput:"
             
+        case 'FOOD_SWAP' :
+            food_item = data.food_item
+            max_tokens = 3000
+            model_id = "mistralai/mixtral-8x7b-instruct-v01"
+            gen_parms   = {
+                                "decoding_method": "greedy",
+                                "max_new_tokens": max_tokens,
+                                "repetition_penalty": 1.11
+                        }
+            output_format = {"Original food":{"Name":" ","calories":"","fat":"","carbohydrates":"","Protein":"","Sugar":"","Fiber":""},"Alternate food":{"Name":"","calories":"","fat":"","carbohydrates":"","Protein":"","Sugar":"","Fiber":""}}
+            
+            prompt_txt = f"""Suggest a food swap for input food item which will be healthier version with reason and Also do provide comparison of nutrition's for both the items. \n Generated output should be in valid JSON format as per output format only\n Should  not add ``` at start or end of output.\n Do not add explanation. \n Input: {food_item}\n Output Format: {output_format}\nOutput:"""
+            const_model = str(project_id) + '_' + str(model_id) + '_' + action + '_' + str(max_tokens)
     #Check for watsonx model
     if const_model not in model_cache.keys():
             logger.info(msg=f'Generating new Model..')
@@ -251,7 +273,6 @@ def predict_chat(data: schemas.AnalysisNutritionsIn, authorization: str = Header
             query = data.query
             personal_data = data.entries
             max_tokens = 500
-            #model_id = "meta-llama/llama-3-2-90b-vision-instruct"
             model_id = "mistralai/mixtral-8x7b-instruct-v01"
             gen_parms   = {
                                 "decoding_method": "greedy",

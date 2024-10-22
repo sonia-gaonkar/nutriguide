@@ -34,21 +34,12 @@ export class DashboardComponent {
 
   async ngOnInit() {
     this.serverurl = this.CommonService.getServerURL();
-
     this.token = this.storage.get('TOKEN');
-    console.log('.........token..................',  this.token)
-
     this.userDataa = await this.CommonService.getUserbyId(this.token.id)
-
-    //console.log('........ this.userData..xxxxxx......',  this.userDataa)
-
     delete this.userDataa["username"];
     delete this.userDataa["_id"];
     delete this.userDataa["password"];
     delete this.userDataa["email"];
-    
-
-    //this.loadScript("assets/js/slider.js");
   }
 
   async getAnalysis(template: TemplateRef<any>, action: any) {
@@ -76,20 +67,17 @@ export class DashboardComponent {
 		formDataTemp.min_tokens = AppConstants.minTokens;
 		formDataTemp.file_path = '';
 
-    formDataTemp.entries = [{
-      "personal_information": {
-            "name": "Emily Johnson",
-            "age": 28,
-            "height_cm": 165,
-            "weight_kg": 72,
-            "BMI": 26.4,
-            "menstrual_cycle_regular": "False",
-            "PCOD_diagnosis_year": 2018
-        }
-    }];	
+  
 
-		//const headers = { 'Authorization': this.storage.retrieve('token').token };
-    const headers = { 'Authorization': "#test" };
+    formDataTemp.entries = [{
+      "personal_information": this.userDataa
+    }];
+ 
+    const headers = { 
+      'Authorization': "#test",
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+     };
 		var res = await this.http.post(`${this.serverurl}data/analysis`, formDataTemp, { headers }).toPromise();
 
     if(res) {
@@ -134,14 +122,11 @@ export class DashboardComponent {
         let watsonx_resp = watsonxpredictions.seasonal_food_guide;
         this.analysisData = watsonx_resp
 
-        console.log(',......analysisData analysisData analysisData..............', this.analysisData)
       }
 
       this.modalRef = this.modalService.show(template, {
         class: 'modal-xl',
       });
-  
-      //return watsonx_resp;
     }
 
   }

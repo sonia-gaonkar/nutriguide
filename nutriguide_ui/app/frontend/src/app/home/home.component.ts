@@ -59,7 +59,6 @@ export class HomeComponent {
 
   async saveUser(form: NgForm) {
 
-    console.log('................................----------',  form.value)
     let formIsValid = true;
     let newformData = form.value
 
@@ -139,12 +138,9 @@ export class HomeComponent {
 		this.usersData = data;
 
     if(data) {
-      console.log('...........this.usersData......................', this.usersData)
-
       let foundUser: any = {};
       foundUser = _.find(this.usersData.users, { 'email': str});
 
-      console.log('........foundUser.............', foundUser)
       if(foundUser) this.emailExists = true;
       else this.emailExists = false;
     }

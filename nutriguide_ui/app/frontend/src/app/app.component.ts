@@ -68,14 +68,8 @@ export class AppComponent {
       this.isDashboardActive = false;    
     }
 
-
     this.token = this.storage.get('TOKEN');
-    console.log('.........token..................',  this.token)
-
     this.userData = await this.CommonService.getUserbyId(this.token.id)
-
-    console.log('........ this.userData..xxxxxx.ccccccccccccccc.....',  this.userData)
-    
 
   }
 

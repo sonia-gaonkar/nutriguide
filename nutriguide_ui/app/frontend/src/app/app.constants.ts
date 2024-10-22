@@ -1,9 +1,7 @@
 export const AppConstants = {
     serverURL:"http://localhost:4200/api/v1/",
     serverAPI:"/api/v1/",
-    watsonServerURL: "https://10.81.32.201:7060/aiapi/v1/",
-    watsonServerBotURL: "",
-    opensearchURL: "",
+    watsonServerURL: "",
     
     apiKey: "",
     rfpModelID : 'MIXTRAL-8X7B-INSTRUCT-V01',

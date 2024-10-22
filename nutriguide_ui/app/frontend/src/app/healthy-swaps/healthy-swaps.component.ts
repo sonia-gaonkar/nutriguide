@@ -46,7 +46,6 @@ export class HealthySwapsComponent {
     this.chatResponse = "";
     this.chatquery = form.value.chatQuery;
     this.showspinner = true;
-    console.log('................................----------',  form.value)
 
     //post body
     let formDataTemp: any = {};
@@ -60,7 +59,6 @@ export class HealthySwapsComponent {
       "personal_information": this.userData
     }];
 
-    console.log('...........formDataTemp...............', formDataTemp)
 
 		//const headers = { 'Authorization': this.storage.retrieve('token').token };
     const headers = { 'Authorization': "#test" };
@@ -70,11 +68,6 @@ export class HealthySwapsComponent {
       this.showspinner = false;
       let watsonxpredictions = (<any>res).watsonxdata.predictions[0];
       this.chatResponse = watsonxpredictions;
-
-      console.log('...........@@@@@@@@@@@@..----------',  watsonxpredictions)
-
-      console.log('..................this.chatResponse.^^^^^^^.............----------',  this.chatResponse)
-
     }
 
   }

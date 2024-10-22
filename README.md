@@ -70,6 +70,9 @@ Python 3.x.x status.py
 ### Step 2: Access the App
 - Open your web browser and go to `http://localhost:8888` 
 
+### Solution architecture
+![alt text](image.png)
+
 ## Contributing
 If you’d like to contribute, please follow these steps:
 1. Fork the repository.

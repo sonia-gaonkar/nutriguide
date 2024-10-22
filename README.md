@@ -35,6 +35,9 @@ npm install
 # cd nutriguide/nutiguide_ui/app/frontend
 npm install
 
+# cd nutriguide/nutiguide_ui/app/frontend   to generate dist folder
+ng build --configuration production
+
 # For Python app
 pip install -r requirements.txt
 

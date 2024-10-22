@@ -71,7 +71,7 @@ Python 3.x.x status.py
 - Open your web browser and go to `http://localhost:8888` 
 
 ### Solution architecture
-![alt text](image.png)
+![Architecture](architecture.png)
 
 ## Contributing
 If you’d like to contribute, please follow these steps:
@@ -79,7 +79,7 @@ If you’d like to contribute, please follow these steps:
 2. Create a new branch: `git checkout -b feature-branch`
 3. Make your changes and commit them: `git commit -m 'Add new feature'`
 4. Push to your branch: `git push origin feature-branch`
-5. Create a Pull Request.
+5. Create a Pull Request
 
 ## License
 Copyright NutriGuide. All Rights Reserved.
